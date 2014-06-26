@@ -1,0 +1,110 @@
+/** 
+ * Create a master SCSS file for the responsive grid
+ */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/** 
+ * TWELVE COLUMN RESPONSIVE GRID
+ * The grid starts out as a mobile first with settings for a 320px wide screen
+ * Breakpoints adjust the relative widths of the column spans
+ */
+html {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.center-content {
+  width: 100%;
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.column {
+  width: 100%;
+  margin-right: 0px;
+  float: left; }
+
+.preview .column {
+  min-height: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+/** IPAD */
+@media screen and (min-width: 768px) {
+  .center-content {
+    min-width: 728px; }
+  .column {
+    margin-right: 2.1%; }
+    .column:last-of-type {
+      margin-right: 0px; }
+  .col-1x {
+    width: 6.4%; }
+  .col-2x {
+    width: 14.9%; }
+  .col-3x {
+    width: 23.4%; }
+  .col-4x {
+    width: 31.9%; }
+  .col-5x {
+    width: 40.4%; }
+  .col-6x {
+    width: 48.9%; }
+  .col-7x {
+    width: 57.4%; }
+  .col-8x {
+    width: 65.9%; }
+  .col-9x {
+    width: 74.4%; }
+  .col-10x {
+    width: 82.9%; }
+  .col-11x {
+    width: 91.4%; }
+  .col-12x, .col-full {
+    width: 100%; } }
+
+/** DESKTOP */
+@media screen and (min-width: 1000px) {
+  .center-content {
+    width: 1000px; } }

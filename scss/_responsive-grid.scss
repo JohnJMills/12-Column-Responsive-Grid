@@ -1,0 +1,95 @@
+/** 
+ * TWELVE COLUMN RESPONSIVE GRID
+ * The grid starts out as a mobile first with settings for a 320px wide screen
+ * Breakpoints adjust the relative widths of the column spans
+ */
+
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.center-content {
+    width: 100%;
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.column {
+    width: 100%;
+    margin-right: 0px;
+    float: left;
+}
+
+
+
+
+// set background-colors and min-height
+// so that column structure can be previewed
+.preview {
+    .column {
+        min-height: 20px;
+        margin-bottom: 20px;
+        background-color: rgba(0,0,0,.3);
+    }
+}
+
+
+
+
+/** IPAD */
+@media screen and (min-width: 768px) {
+    .center-content { min-width: 728px; }
+
+    .column {
+        margin-right: 2.1%;
+
+        &:last-of-type { margin-right: 0px; }
+    }
+
+    .col-1x { width: 6.4%; }
+
+    .col-2x { width: 14.9%; }
+
+    .col-3x { width: 23.4%; }
+
+    .col-4x { width: 31.9%; }
+
+    .col-5x { width: 40.4%; }
+
+    .col-6x { width: 48.9%; }
+
+    .col-7x { width: 57.4%; }
+
+    .col-8x { width: 65.9%; }
+    
+    .col-9x { width: 74.4%; }
+
+    .col-10x { width: 82.9%;}
+
+    .col-11x { width: 91.4%; }  
+
+    .col-12x, 
+    .col-full { width: 100%; }
+
+} // end 768 breakpoint
+
+
+
+
+/** DESKTOP */
+@media screen and (min-width: 1000px) {
+    
+    .center-content { width: 1000px; }
+    
+} // end 1000 breakpoint
