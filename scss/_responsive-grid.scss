@@ -32,6 +32,10 @@ body {
 }
 
 
+// column widths
+.col-12x, 
+.col-full { width: 100%; }
+
 
 
 // set background-colors and min-height
@@ -47,6 +51,55 @@ body {
 
 
 
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+    .center-content { min-width: 560px; }
+
+    .column {
+        margin-right: 2.8%;
+        &:last-of-type { margin-right: 0px; }
+    }
+
+    .col-1x { width: 14.3%; }
+
+    .col-2x { width: 31.4%; }
+
+    .col-4x { width: 31.4%; }
+
+    .col-3x,
+    .col-5x,
+    .col-6x { width: 48.6%; }
+
+    .col-7x { width: 57.2%; }
+
+    .col-8x { width: 65.8%; }
+
+    // uncomment these lines to create 
+    // even columns at this size
+    // .col-3x { width: 22.9%; }
+    // .col-5x { width: 40%; }
+
+} // end 600px breakpoint
+
+
+/** ONLY 7" KINDLE FIRE */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .col-1x {
+        &:nth-of-type(6) { margin-right: 0px; }
+    }
+    .col-2x {
+        &:nth-of-type(3) { margin-right: 0px; }
+    }
+    .col-3x,
+    .col-5x {
+        &:nth-of-type(2) { margin-right: 0px; }
+    }
+
+} // end 600px only breakpoint
+
+
+
+
 /** IPAD */
 @media screen and (min-width: 768px) {
     .center-content { min-width: 728px; }
@@ -56,7 +109,7 @@ body {
 
         &:last-of-type { margin-right: 0px; }
     }
-
+    
     .col-1x { width: 6.4%; }
 
     .col-2x { width: 14.9%; }
@@ -79,10 +132,7 @@ body {
 
     .col-11x { width: 91.4%; }  
 
-    .col-12x, 
-    .col-full { width: 100%; }
-
-} // end 768 breakpoint
+} // end 768px breakpoint
 
 
 
@@ -92,4 +142,4 @@ body {
     
     .center-content { width: 1000px; }
     
-} // end 1000 breakpoint
+} // end 1000px breakpoint

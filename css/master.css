@@ -66,10 +66,43 @@ body {
   margin-right: 0px;
   float: left; }
 
+.col-12x, .col-full {
+  width: 100%; }
+
 .preview .column {
   min-height: 20px;
   margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.3); }
+
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+  .center-content {
+    min-width: 560px; }
+  .column {
+    margin-right: 2.8%; }
+    .column:last-of-type {
+      margin-right: 0px; }
+  .col-1x {
+    width: 14.3%; }
+  .col-2x {
+    width: 31.4%; }
+  .col-4x {
+    width: 31.4%; }
+  .col-3x, .col-5x, .col-6x {
+    width: 48.6%; }
+  .col-7x {
+    width: 57.2%; }
+  .col-8x {
+    width: 65.8%; } }
+
+/** ONLY 7" KINDLE FIRE */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .col-1x:nth-of-type(6) {
+    margin-right: 0px; }
+  .col-2x:nth-of-type(3) {
+    margin-right: 0px; }
+  .col-3x:nth-of-type(2), .col-5x:nth-of-type(2) {
+    margin-right: 0px; } }
 
 /** IPAD */
 @media screen and (min-width: 768px) {
@@ -100,9 +133,7 @@ body {
   .col-10x {
     width: 82.9%; }
   .col-11x {
-    width: 91.4%; }
-  .col-12x, .col-full {
-    width: 100%; } }
+    width: 91.4%; } }
 
 /** DESKTOP */
 @media screen and (min-width: 1000px) {
