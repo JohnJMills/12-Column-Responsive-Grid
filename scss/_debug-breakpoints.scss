@@ -1,0 +1,72 @@
+/**
+ * Create a div style that can be used to show which breakpoint is active
+ */
+
+.debug-br {
+    
+    &:after {
+        content: 'iPhone 320';
+        position: fixed;
+        z-index: 100;
+        top: 0px;
+        left: 30px;
+        height: 30px;
+        
+        padding: 10px 10px 0px 10px;
+        
+        color: lime;
+        font-size: 10px;
+        font-family: sans-serif;
+        text-align: center;
+        
+        background-color: rgba(0,0,0,.75);
+    }
+}
+
+
+
+
+/** Android Phone */
+@media screen and (min-width: 480px) {
+    .debug-br {
+        &:after {
+            content: 'Android Phone 480';       
+        }
+    }
+} // end 600px breakpoint
+
+
+
+
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+    .debug-br {
+        &:after {
+            content: 'KindleFire 600';       
+        }
+    }
+} // end 600px breakpoint
+
+
+
+
+/** IPAD */
+@media screen and (min-width: 768px) {
+    .debug-br {
+        &:after {
+            content: 'iPad 768';       
+        }
+    }
+} // end 768px breakpoint
+
+
+
+
+/** DESKTOP */
+@media screen and (min-width: 960px) {
+    .debug-br {
+        &:after {
+            content: 'Desktop 960';       
+        }
+    }
+} // end 1000px breakpoint

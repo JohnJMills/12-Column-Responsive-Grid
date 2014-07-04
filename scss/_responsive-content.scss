@@ -1,0 +1,90 @@
+/**
+ * Create the ability to show/hide content at different breakpoints
+ */
+
+.no-mobile { display: none; }
+
+.show-320-only,
+.show-480-only,
+.show-600-only,
+.show-768-only,
+.show-960-only {
+    display: none;
+}
+
+.show-over-480,
+.show-over-600,
+.show-over-768,
+.show-over-960 {
+    display: none;
+}
+
+
+/** iPHONE ONLY */
+@media screen and (max-width: 479px) {
+    .show-320-only { display: block; }
+    .hide-320-only { display: none; }
+}
+
+
+/** Android Phone ONLY */
+@media screen and (min-width: 480px) and (max-width: 599px) {
+    .show-480-only { display: block; }
+    .hide-480-only { display: none; }
+}
+
+
+/** Kindle Fire ONLY */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .show-600-only { display: block; } 
+    .hide-600-only { display: none; }
+}
+
+    
+/** iPAD ONLY */
+@media screen and (min-width: 768px) and (max-width: 958px) {
+    .show-768-only { display: block; } 
+    .hide-768-only { display: none; }
+}
+
+        
+/** desktop ONLY */
+@media screen and (min-width: 960px) {
+    .show-960-only { display: block; } 
+    .hide-960-only { display: none; }
+}
+
+        
+        
+        
+/** Android Phone */
+@media screen and (min-width: 480px) {
+     .show-over-480 { display: block; }
+     .hide-over-480 { display: none; }
+}
+
+        
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+    .show-over-600 { display: block; }
+    .hide-over-600 { display: none; }
+} // end 600px breakpoint
+
+        
+/** IPAD */
+@media screen and (min-width: 768px) {
+    .no-mobile { display: block; }
+    .show-over-768 { display: block; }
+    .hide-over-768 { display: none; }
+} // end 768px breakpoint
+
+        
+/** DESKTOP */
+@media screen and (min-width: 960px) {
+    .show-over-960 { display: block; }
+    .hide-over-960 { display: none; }
+} // end 960px breakpoint
+        
+        
+        
+        

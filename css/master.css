@@ -40,6 +40,43 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/**
+ * Create a div style that can be used to show which breakpoint is active
+ */
+.debug-br:after {
+  content: 'iPhone 320';
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 30px;
+  height: 30px;
+  padding: 10px 10px 0px 10px;
+  color: lime;
+  font-size: 10px;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75); }
+
+/** Android Phone */
+@media screen and (min-width: 480px) {
+  .debug-br:after {
+    content: 'Android Phone 480'; } }
+
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+  .debug-br:after {
+    content: 'KindleFire 600'; } }
+
+/** IPAD */
+@media screen and (min-width: 768px) {
+  .debug-br:after {
+    content: 'iPad 768'; } }
+
+/** DESKTOP */
+@media screen and (min-width: 960px) {
+  .debug-br:after {
+    content: 'Desktop 960'; } }
+
 /** 
  * TWELVE COLUMN RESPONSIVE GRID
  * The grid starts out as a mobile first with settings for a 320px wide screen
@@ -55,87 +92,306 @@ body {
 
 .center-content {
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px; }
+  margin-right: auto; }
 
 .column {
   width: 100%;
-  margin-right: 0px;
+  margin-right: 2.27%;
   float: left; }
+  .column:last-of-type {
+    margin-right: 0%; }
+  .column.no-margin {
+    margin-right: 0%; }
+  .column.fat {
+    margin-right: 0%; }
+  .column.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto; }
+  .column.no-float {
+    float: none; }
 
-.col-12x, .col-full {
+.row-break {
+  clear: both;
+  width: 100%;
+  height: 0px; }
+
+.col-1x, .col-2x {
+  width: 14.77%; }
+  .col-1x.fat, .col-2x.fat {
+    width: 19.31%; }
+
+.col-3x {
+  width: 23.29%; }
+  .col-3x.fat {
+    width: 27.83%; }
+
+.col-4x {
+  width: 31.81%; }
+  .col-4x.fat {
+    width: 36.35%; }
+
+.col-5x, .col-6x, .col-7x, .col-8x, .col-9x, .col-10x, .col-11x, .col-12x, .col-full {
   width: 100%; }
 
 .preview .column {
-  min-height: 20px;
+  min-height: 30px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(102, 0, 204, 0.2);
+  font-size: 10px;
+  color: #666;
+  text-align: center; }
+
+/** iPHONE ONLY */
+@media screen and (max-width: 599px) {
+  .col-1x:nth-of-type(6n+0) {
+    margin-right: 0%; } }
 
 /** 7" KINDLE FIRE */
 @media screen and (min-width: 600px) {
-  .center-content {
-    min-width: 560px; }
   .column {
-    margin-right: 2.8%; }
-    .column:last-of-type {
-      margin-right: 0px; }
+    margin-right: 2.5%; }
   .col-1x {
-    width: 14.3%; }
+    width: 6.04%; }
+    .col-1x.fat {
+      width: 11.04%; }
   .col-2x {
-    width: 31.4%; }
+    width: 14.54%; }
+    .col-2x.fat {
+      width: 19.54%; }
+  .col-3x {
+    width: 23.12%; }
+    .col-3x.fat {
+      width: 28.12%; }
   .col-4x {
-    width: 31.4%; }
-  .col-3x, .col-5x, .col-6x {
-    width: 48.6%; }
+    width: 31.66%; }
+    .col-4x.fat {
+      width: 36.66%; }
+  .col-5x {
+    width: 40.2%; }
+    .col-5x.fat {
+      width: 45.2%; }
+  .col-6x {
+    width: 48.74%; }
+    .col-6x.fat {
+      width: 53.74%; }
   .col-7x {
-    width: 57.2%; }
+    width: 57.28%; }
+    .col-7x.fat {
+      width: 62.28%; }
   .col-8x {
-    width: 65.8%; } }
+    width: 65.82%; }
+    .col-8x.fat {
+      width: 70.82%; } }
 
 /** ONLY 7" KINDLE FIRE */
-@media screen and (min-width: 600px) and (max-width: 767px) {
-  .col-1x:nth-of-type(6) {
-    margin-right: 0px; }
-  .col-2x:nth-of-type(3) {
-    margin-right: 0px; }
-  .col-3x:nth-of-type(2), .col-5x:nth-of-type(2) {
-    margin-right: 0px; } }
+@media screen and (min-width: 600px) and (max-width: 767px) { }
 
 /** IPAD */
 @media screen and (min-width: 768px) {
-  .center-content {
-    min-width: 728px; }
   .column {
-    margin-right: 2.1%; }
-    .column:last-of-type {
-      margin-right: 0px; }
+    margin-right: 1.903%; }
   .col-1x {
-    width: 6.4%; }
+    width: 6.5889%; }
+    .col-1x.fat {
+      width: 10.3949%; }
   .col-2x {
-    width: 14.9%; }
+    width: 15.08%; }
+    .col-2x.fat {
+      width: 18.886%; }
   .col-3x {
-    width: 23.4%; }
+    width: 23.5727%; }
+    .col-3x.fat {
+      width: 27.3787%; }
   .col-4x {
-    width: 31.9%; }
+    width: 32.0646%; }
+    .col-4x.fat {
+      width: 35.8706%; }
   .col-5x {
-    width: 40.4%; }
+    width: 40.5565%; }
+    .col-5x.fat {
+      width: 44.3625%; }
   .col-6x {
-    width: 48.9%; }
+    width: 49.0484%; }
+    .col-6x.fat {
+      width: 52.8544%; }
   .col-7x {
-    width: 57.4%; }
+    width: 57.5403%; }
+    .col-7x.fat {
+      width: 61.3463%; }
   .col-8x {
-    width: 65.9%; }
+    width: 66.0322%; }
+    .col-8x.fat {
+      width: 69.8382%; }
   .col-9x {
-    width: 74.4%; }
+    width: 74.5241%; }
+    .col-9x.fat {
+      width: 78.3301%; }
   .col-10x {
-    width: 82.9%; }
+    width: 83.016%; }
+    .col-10x.fat {
+      width: 86.822%; }
   .col-11x {
-    width: 91.4%; } }
+    width: 91.5079%; }
+    .col-11x.fat {
+      width: 95.3139%; } }
 
 /** DESKTOP */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 960px) {
   .center-content {
-    width: 1000px; } }
+    width: 960px; }
+  .column {
+    margin-right: 2.0833%; }
+  .col-1x {
+    width: 6.4236%; }
+    .col-1x.fat {
+      width: 10.5902%; }
+  .col-2x {
+    width: 14.9305%; }
+    .col-2x.fat {
+      width: 19.0971%; }
+  .col-3x {
+    width: 23.4374%; }
+    .col-3x.fat {
+      width: 27.604%; }
+  .col-4x {
+    width: 31.9443%; }
+    .col-4x.fat {
+      width: 36.1109%; }
+  .col-5x {
+    width: 40.4512%; }
+    .col-5x.fat {
+      width: 44.6178%; }
+  .col-6x {
+    width: 48.9581%; }
+    .col-6x.fat {
+      width: 53.1247%; }
+  .col-7x {
+    width: 57.465%; }
+    .col-7x.fat {
+      width: 61.6316%; }
+  .col-8x {
+    width: 65.9719%; }
+    .col-8x.fat {
+      width: 70.1385%; }
+  .col-9x {
+    width: 74.4788%; }
+    .col-9x.fat {
+      width: 78.6454%; }
+  .col-10x {
+    width: 82.9857%; }
+    .col-10x.fat {
+      width: 87.1523%; }
+  .col-11x {
+    width: 91.4926%; }
+    .col-11x.fat {
+      width: 95.6592%; } }
+
+/**
+ * Create the ability to show/hide content at different breakpoints
+ */
+.no-mobile {
+  display: none; }
+
+.show-320-only, .show-480-only, .show-600-only, .show-768-only, .show-960-only {
+  display: none; }
+
+.show-over-480, .show-over-600, .show-over-768, .show-over-960 {
+  display: none; }
+
+/** iPHONE ONLY */
+@media screen and (max-width: 479px) {
+  .show-320-only {
+    display: block; }
+  .hide-320-only {
+    display: none; } }
+
+/** Android Phone ONLY */
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .show-480-only {
+    display: block; }
+  .hide-480-only {
+    display: none; } }
+
+/** Kindle Fire ONLY */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .show-600-only {
+    display: block; }
+  .hide-600-only {
+    display: none; } }
+
+/** iPAD ONLY */
+@media screen and (min-width: 768px) and (max-width: 958px) {
+  .show-768-only {
+    display: block; }
+  .hide-768-only {
+    display: none; } }
+
+/** desktop ONLY */
+@media screen and (min-width: 960px) {
+  .show-960-only {
+    display: block; }
+  .hide-960-only {
+    display: none; } }
+
+/** Android Phone */
+@media screen and (min-width: 480px) {
+  .show-over-480 {
+    display: block; }
+  .hide-over-480 {
+    display: none; } }
+
+/** 7" KINDLE FIRE */
+@media screen and (min-width: 600px) {
+  .show-over-600 {
+    display: block; }
+  .hide-over-600 {
+    display: none; } }
+
+/** IPAD */
+@media screen and (min-width: 768px) {
+  .no-mobile {
+    display: block; }
+  .show-over-768 {
+    display: block; }
+  .hide-over-768 {
+    display: none; } }
+
+/** DESKTOP */
+@media screen and (min-width: 960px) {
+  .show-over-960 {
+    display: block; }
+  .hide-over-960 {
+    display: none; } }
+
+body {
+  padding-top: 50px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-left: 1px solid aqua;
+  border-right: 1px solid aqua; }
+
+h1, h2, h3, h4 {
+  padding-bottom: 20px;
+  font-weight: 200; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 18px; }
+
+p {
+  margin-bottom: 20px; }
+
+strong {
+  font-weight: bold; }

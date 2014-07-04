@@ -12,12 +12,17 @@
     
         <section class="center-content">
         
+            
             <div class="column col-full">
-                <p>12 columns (col-1x)</p>
+                <h1>12 Column Responsive Grid</h1>
+                <p>Each column is a &lt;div&gt; tag with the class <em>column</em> applied to it.</p>
+                <p>By default, the width of a column is 100%. A custom width can be set by applying a size class. The grid supports 12 column divisions and sizes span a number of 1/12th columns. So a 1x column is 1/12th and a 2x column is 2/12ths and so on.</p>
             </div>
+            <div class="row-break"></div>
         
+            <!-- 12 columns -->
             <span class="preview">
-                <div class="column col-1x"></div>
+                <div class="column col-1x">col-1x</div>
                 <div class="column col-1x"></div>
                 <div class="column col-1x"></div>
                 <div class="column col-1x"></div>
@@ -30,7 +35,177 @@
                 <div class="column col-1x"></div>
                 <div class="column col-1x"></div>
             </span>
+            <div class="row-break"></div>
+
+            <!-- 6 columns -->
+            <span class="preview">
+                <div class="column col-2x">col-2x</div>
+                <div class="column col-2x"></div>
+                <div class="column col-2x"></div>
+                <div class="column col-2x"></div>
+                <div class="column col-2x"></div>
+                <div class="column col-2x"></div>
+            </span>
+            <div class="row-break"></div>
             
+            <!-- 4 columns -->
+            <span class="preview">
+                <div class="column col-3x">col-3x</div>
+                <div class="column col-3x"></div>
+                <div class="column col-3x"></div>
+                <div class="column col-3x"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 3 columns -->
+            <span class="preview">
+                <div class="column col-4x">col-4x</div>
+                <div class="column col-4x"></div>
+                <div class="column col-4x"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 5x -->
+            <span class="preview">
+                <div class="column col-5x">col-5x</div>
+                <div class="column col-5x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 2 columns -->
+            <span class="preview">
+                <div class="column col-6x">col-6x</div>
+                <div class="column col-6x"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 7x -->
+            <span class="preview">
+                <div class="column col-7x">col-7x</div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 8x -->
+            <span class="preview">
+                <div class="column col-8x">col-8x</div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+                <div class="column col-1x show-over-600"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 9x -->
+            <span class="preview">
+                <div class="column col-9x">col-9x</div>
+                <div class="column col-1x show-over-768"></div>
+                <div class="column col-1x show-over-768"></div>
+                <div class="column col-1x show-over-768"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 10x -->
+            <span class="preview">
+                <div class="column col-10x">col-10x</div>
+                <div class="column col-1x show-over-768"></div>
+                <div class="column col-1x show-over-768"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 11x -->
+            <span class="preview">
+                <div class="column col-11x">col-11x</div>
+                <div class="column col-1x show-over-768"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!-- 11x -->
+            <span class="preview">
+                <div class="column">col-12x, col-full</div>
+            </span>
+            <div class="row-break"></div>
+            
+            <div class="column col-full">
+                <p><strong>.no-margin</strong> Add the .no-margin class to remove the margin to the right of the column.</p>
+            </div>
+            
+            <span class="preview">
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+                <div class="column col-1x no-margin"></div>
+            </span>
+            <div class="row-break"></div>
+            
+            <div class="column col-full">
+                <p><strong>.fat</strong> Add the .fat class to expand a column to take up margins to both the left and right. In the sample below the .fat class and .no-margin classes alternate</p>
+            </div>
+            <div class="row-break"></div>
+            
+            <span class="preview">
+                <div class="column col-2x no-margin show-over-600">no-margin, show-over-600</div>
+                <div class="column col-8x fat">col-8x fat</div>
+                <div class="column col-2x no-margin show-over-600">no-margin, show-over-600</div>
+
+            </span>
+            <div class="row-break"></div>
+            
+            <div class="column col-full">
+                <p><strong>.center</strong> Add the .center class to force a column to center within the content wrapper.</p>
+            </div>
+            <div class="row-break"></div>
+            
+            <span class="preview">
+                <div class="column col-6x center">col-6x<br/>I'm centered</div>
+            </span>
+            <div class="row-break"></div>
+            
+            <div class="column col-full">
+                <p><strong>.no-float</strong> Use the .no-float class to remove the float from a column</p>
+            </div>
+            <div class="row-break"></div>
+            
+            <span class="preview">
+                <div class="column col-6x no-float">col-6x<br/>no-float</div>
+            </span>
+            <div class="row-break"></div>
+            
+            <div class="column col-full">
+                <p><strong>nesting</strong> Coulumns can be nested inside each other</p>
+            </div>
+            <div class="row-break"></div>
+            
+            <span class="preview">
+                <div class="column col-8x center">
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="column col-1x"></div>
+                    <div class="row-break"></div>
+                </div>
+            </span>
+            <div class="row-break"></div>
+            
+            <!--
             <div class="column col-full">
                 <p>6 columns (col-2x)</p>
             </div>
@@ -136,8 +311,10 @@
             <span class="preview">
                 <div class="column col-12x"></div>
             </span>
-            
+            -->
         </section>
         
+        
+        <div class="debug-br"></div>
     </body>
 </html>
