@@ -91,6 +91,7 @@ body {
   padding: 0px; }
 
 .center-content {
+  position: relative;
   width: 100%;
   min-width: 320px;
   margin-left: auto;
@@ -112,6 +113,10 @@ body {
     margin-right: auto; }
   .column.no-float {
     float: none; }
+
+.container {
+  position: absolute;
+  width: 100%; }
 
 .row-break {
   clear: both;
@@ -145,9 +150,15 @@ body {
   color: #666;
   text-align: center; }
 
+.fixed .center-content {
+  width: 320px; }
+
 /** iPHONE ONLY */
 @media screen and (max-width: 599px) {
   .col-1x:nth-of-type(6n+0) {
+    margin-right: 0%; }
+  .mobile-wide {
+    width: 100%;
     margin-right: 0%; } }
 
 /** 7" KINDLE FIRE */
@@ -185,7 +196,9 @@ body {
   .col-8x {
     width: 65.82%; }
     .col-8x.fat {
-      width: 70.82%; } }
+      width: 70.82%; }
+  .fixed .center-content {
+    width: 600px; } }
 
 /** ONLY 7" KINDLE FIRE */
 @media screen and (min-width: 600px) and (max-width: 767px) { }
@@ -237,7 +250,9 @@ body {
   .col-11x {
     width: 91.5079%; }
     .col-11x.fat {
-      width: 95.3139%; } }
+      width: 95.3139%; }
+  .fixed .center-content {
+    width: 768px; } }
 
 /** DESKTOP */
 @media screen and (min-width: 960px) {
@@ -395,3 +410,6 @@ p {
 
 strong {
   font-weight: bold; }
+
+em {
+  font-style: italic; }

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/master.css">
         
     </head>
-    <body>
+    <body class="">
     
         <section class="center-content">
         
@@ -186,132 +186,54 @@
             <div class="row-break"></div>
             
             <div class="column col-full">
-                <p><strong>nesting</strong> Coulumns can be nested inside each other</p>
+                <p><strong>nesting</strong> Coulumns can be nested inside each other. To nest columns, first add a child &lt;div&gt; to your column with the <strong>.container</strong> class. Nested columns should be added insted the .container element.</p>
             </div>
             <div class="row-break"></div>
             
             <span class="preview">
-                <div class="column col-8x center">
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="column col-1x"></div>
-                    <div class="row-break"></div>
+                <div class="column col-8x center" style="border:none">
+                    <div class="container">
+
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x" style="border:none"></div>
+                        <div class="column col-1x show-over-600" style="border:none"></div>
+                        <div class="column col-1x show-over-600" style="border:none"></div>
+                        
+                        <div class="row-break"></div>
+                    </div>
                 </div>
             </span>
             <div class="row-break"></div>
             
-            <!--
-            <div class="column col-full">
-                <p>6 columns (col-2x)</p>
+            <div class="column col-8x center">
+                <p style="font-size: 10px; color: #666;"><em>Be aware that the math for nesting columns doesn't always work well at different sizes. In this example, the last two nested columns are hidden at smaller resolutions because the 8x column is 100% wide on mobile devices while the 1x column is actually 2x wide on mobile devices.</em></p>
             </div>
+            <div class="row-break"></div>
             
-            <span class="preview">
-                <div class="column col-2x"></div>
-                <div class="column col-2x"></div>
-                <div class="column col-2x"></div>
-                <div class="column col-2x"></div>
-                <div class="column col-2x"></div>
-                <div class="column col-2x"></div>
-            </span>
             
             <div class="column col-full">
-                <p>4 columns (col-3x)</p>
+                <p><strong>.wide-mobile</strong> Some columns may need to expand to 100% wide for mobile but only be 2x or 3x wide in larger resolutions. To force a column to expand to 100% on mobile screens add the .wide-mobile class. Columns in the sample below have the .mobile-wide class applied.</p>
             </div>
+            <div class="row-break"></div>
             
             <span class="preview">
-                <div class="column col-3x"></div>
-                <div class="column col-3x"></div>
-                <div class="column col-3x"></div>
-                <div class="column col-3x"></div>
+                <div class="column col-2x mobile-wide">col-2x</div>
+                <div class="column col-2x mobile-wide">col-2x</div>
+                <div class="column col-4x mobile-wide">col-4x</div>
+                <div class="column col-2x mobile-wide">col-2x</div>
+                <div class="column col-2x mobile-wide">col-2x</div>
             </span>
+            <div class="row-break"></div>
             
             <div class="column col-full">
-                <p>3 columns (col-4x)</p>
+                <p><strong>.fixed</strong> The grid system is fluid and scales from breakpoint to breakpoint. If you want to fix the widths to the breakpoints (320, 480, 600, 768, 960) then apply the .fixed class to the &lt;body&gt; tag. This will fix the width of the .center-content class to match the breakpoint width.</p>
             </div>
+            <div class="row-break"></div>
             
-            <span class="preview">
-                <div class="column col-4x"></div>
-                <div class="column col-4x"></div>
-                <div class="column col-4x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>col5x</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-5x"></div>
-                <div class="column col-5x"></div>
-                <div class="column col-2x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>col-6x</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-6x"></div>
-                <div class="column col-6x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>col-7x</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-7x"></div>
-                <div class="column col-5x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>col-8x</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-8x"></div>
-                <div class="column col-4x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>col-9x</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-9x"></div>
-                <div class="column col-3x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>1 column plus 1 columns (col-10x / col-2)</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-10x"></div>
-                <div class="column col-2x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>1 column plus 1 columns (col-11x / col-1)</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-11x"></div>
-                <div class="column col-1x"></div>
-            </span>
-            
-            <div class="column col-full">
-                <p>full span (col-12x OR col-full)</p>
-            </div>
-            
-            <span class="preview">
-                <div class="column col-12x"></div>
-            </span>
-            -->
         </section>
         
         

@@ -16,6 +16,7 @@ body {
 }
 
 .center-content {
+    position: relative;
     width: 100%;
     min-width: 320px;
     margin-left: auto;
@@ -40,6 +41,13 @@ body {
     &.no-float {
         float: none;   
     }
+}
+
+// create a container class that resets the width 
+// so that nested columns will size correctly
+.container {
+    position: absolute;
+    width: 100%;
 }
 
 .row-break {
@@ -96,12 +104,23 @@ body {
 }
 
 
+// fix the content width
+.fixed .center-content {
+    width: 320px;
+}
+
+
 
 /** iPHONE ONLY */
 @media screen and (max-width: 599px) {
 
     .col-1x { 
         &:nth-of-type(6n+0) { margin-right: 0%; }
+    }
+    
+    .mobile-wide {
+        width: 100%;
+        margin-right: 0%;
     }
 }
 
@@ -152,7 +171,11 @@ body {
         width: 65.82%;
         &.fat { width: 70.82%; }
     }
-
+    
+    // fix the content width
+    .fixed .center-content {
+        width: 600px;
+    }
 
 } // end 600px breakpoint
 
@@ -206,6 +229,7 @@ body {
     }
     
     .col-8x {
+        
         width: 66.0322%;
         &.fat { width: 69.8382%; }
     }
@@ -223,6 +247,11 @@ body {
     .col-11x {
         width: 91.5079%;
         &.fat { width: 95.3139%; }
+    }
+    
+    // fix the content width
+    .fixed .center-content {
+        width: 768px;
     }
     
 } // end 768px breakpoint
@@ -275,6 +304,8 @@ body {
     .col-8x {
         width: 65.9719%;
         &.fat { width: 70.1385%; }
+        
+        
     }
     
     .col-9x {
