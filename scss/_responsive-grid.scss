@@ -6,11 +6,14 @@
 
 
 html {
+    height: 100%;
     margin: 0px;
     padding: 0px;
+
 }
 
 body {
+    height: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -21,6 +24,8 @@ body {
     min-width: 320px;
     margin-left: auto;
     margin-right: auto;
+    
+    @include clearfix();
 }
 
 .column {
@@ -28,6 +33,7 @@ body {
     margin-right: 2.27%;
     float: left;
     
+    &.align-right { float: right; }
     &:last-of-type { margin-right: 0%; }
     &.no-margin { margin-right: 0%; }
     &.fat { margin-right: 0%; }
@@ -41,13 +47,30 @@ body {
     &.no-float {
         float: none;   
     }
+    
+    &.add-gutters,
+    &.mobile-gutters {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
-// create a container class that resets the width 
-// so that nested columns will size correctly
+// create a container that will center a group of
+// columns that do not fill the enire width of the center-content section
 .container {
-    position: absolute;
     width: 100%;
+    margin: 0px auto 0px auto;
+    
+    text-align: center;
+    
+    // remove floats on the columns so that they
+    // align properly when nested within the .container
+    .column {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
 }
 
 .row-break {
@@ -64,7 +87,7 @@ body {
 .col-1x,
 .col-2x { 
     width: 14.77%;
-    &.fat { width: 19.31%;}
+    &.fat { width: 19.31%; }
 }
 .col-3x {
     width: 23.29%;
@@ -113,15 +136,28 @@ body {
 
 /** iPHONE ONLY */
 @media screen and (max-width: 599px) {
+    
+    .column {
+        &.mobile-gutters {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 
     .col-1x { 
         &:nth-of-type(6n+0) { margin-right: 0%; }
     }
     
-    .mobile-wide {
+    .mobile-wide, 
+    .col-1x.fat.mobile-wide,
+    .col-2x.fat.mobile-wide,
+    .col-3x.fat.mobile-wide,
+    .col-4x.fat.mobile-wide {
         width: 100%;
         margin-right: 0%;
     }
+
+    
 }
 
 
@@ -130,7 +166,14 @@ body {
 /** 7" KINDLE FIRE */
 @media screen and (min-width: 600px) {
     
-    .column { margin-right: 2.5%; }
+    .column { 
+        margin-right: 2.5%; 
+        
+        &.mobile-gutters {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
     
     .col-1x {
         width: 6.04%;
@@ -191,7 +234,9 @@ body {
 /** IPAD */
 @media screen and (min-width: 768px) {
 
-    .column { margin-right: 1.903%; }
+    .column { 
+        margin-right: 1.903%; 
+    }
     
     .col-1x { 
         width: 6.5889%;
